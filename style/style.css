@@ -1,0 +1,69 @@
+    @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    
+    :root{
+        --main-font: "PT Sans";
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(180deg, #51aca7, #55c982, rgb(233, 233, 113));
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .menu{
+        width: 450px;
+        min-height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        position: fixed;
+        left: calc(50% - 225px);
+        top: calc(50% - 225px);   
+
+            & h2{
+                font-size: 35px;
+                font-family: var(--main-font);
+                cursor: default;
+                opacity: 0;
+            }
+
+            & button{
+                width: 270px;
+                height: 35px;
+                cursor: crosshair;
+                border: none;
+                outline: none;
+                color: white;
+                font-family: var(--main-font);
+                font-style: italic;
+                border-radius: 15px;
+                transition: all .3s ease;
+                opacity: 0;
+
+                    &:hover{
+                       transform: scale(1.1); 
+                    }
+            }
+    }
+
+
+
+    @keyframes appearing{
+        from{
+            opacity: 0;
+            transform: translateY(-30px);
+        }to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
